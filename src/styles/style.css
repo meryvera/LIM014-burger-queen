@@ -293,6 +293,7 @@
   .orderList .orderDetails h4 {
     text-decoration: underline;
   }
+
   .orderList .orderDetails .titles {
     display: -webkit-box;
     display: -ms-flexbox;

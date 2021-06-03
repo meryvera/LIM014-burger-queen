@@ -35,6 +35,7 @@
     button {
       cursor:pointer;
     }
+
     .submitButton{
       @include buttonStyle(1px, $mainColor, $mainColor, 0.5rem, 0.4rem);
       color: $white;
@@ -79,6 +80,4 @@
       }
     }
   }
-
-  
 }
