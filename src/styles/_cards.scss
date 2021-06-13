@@ -3,29 +3,46 @@
 @media screen and (min-width: 768px) {
   .statusCard{
     margin: 1.3rem;
-    line-height: 1.2rem;
+    line-height: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
     .cards{
       font-size: $small;
-      @include buttonStyle(1px, $mainColor, $white, 0.5rem, 0.4rem);
-      @include displayFlex(column, flex-start, flex-start);
-      margin: 0.5rem;
-      padding: 0.8rem;
-      width: 15rem;
+      @include buttonStyle(1px, $mainColor, $white, 0.5rem, 0.8rem);
+      @include displayFlex(column, space-between, flex-start);
+      margin: 0.7rem;
+      width: 13.5rem;
+      cursor: auto;
+      section {
+        width: 100%;
+      }
       h3, button {
         align-self: center;
         margin: 0.5rem;
+        text-align: center;
       }
       .onlyrow {
-        @include displayFlex(row, space-between, flex-start);
+        @include displayFlex(row, flex-start, flex-start);
       }
+
       button {
-        @include buttonStyle(1px, transparent, $mainColor, 0.5rem, 0.2rem);
+        @include buttonStyle(1px, transparent, $mainColor, 0.5rem, 0.3rem);
         color: $white;
+        font-size: $small;
+        width: 8.5rem;
       }
       .smallerFont {
         font-size: $xsmall;
       }
+      .is-active{
+        background-color: $mainColor;
+        color: $white;
+      }
+      .inactive{
+        background-color: $darkGrey;
+        cursor: not-allowed;
+      }
     }
   }
-  
+
 }

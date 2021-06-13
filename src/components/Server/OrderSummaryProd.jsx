@@ -1,23 +1,29 @@
 import React from 'react';
 import deleteIcon from "../../img/delete.png";
 
-export const OrderSummaryProd = (item) => {
+export const OrderSummaryProd = ({item, handleQty, handleRemove}) => {
 
   return (
-  <section className="prodQty" key={item.id}>
+  <section className="prodQty" >
     <div className="prod">
       <p>{item.name}</p>
       <div>
-        {/* <button onClick={() => handleQty(item.id, "-")}>-</button>
+        <button onClick={(e) => {
+          e.preventDefault()
+          handleQty(item.id, "-")}}>-</button>
         <p>{item.amount}</p>
-        <button onClick={() => handleQty(item.id, "+")}>+</button>
+        <button onClick={(e) => {
+          e.preventDefault()
+          handleQty(item.id, "+")}}>+</button>
         <button>
           <img
             src={deleteIcon}
-            onClick={() => handleRemove(item.id)}
+            onClick={(e) => {
+              e.preventDefault()
+              handleRemove(item.id)}}
             alt=""
           />
-        </button> */}
+        </button>
       </div>
     </div>
     <p>S/. {item.price * item.amount}</p>

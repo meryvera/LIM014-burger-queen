@@ -144,6 +144,88 @@
 }
 
 @media screen and (min-width: 768px) {
+  .statusCard {
+    margin: 1.3rem;
+    line-height: 1.1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .statusCard .cards {
+    font-size: 0.9rem;
+    border: solid 1px #ff8508;
+    background-color: #ffff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0.7rem;
+    width: 13.5rem;
+    cursor: auto;
+  }
+  .statusCard .cards section {
+    width: 100%;
+  }
+  .statusCard .cards h3, .statusCard .cards button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0.5rem;
+    text-align: center;
+  }
+  .statusCard .cards .onlyrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .statusCard .cards button {
+    border: solid 1px transparent;
+    background-color: #ff8508;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    color: #ffff;
+    font-size: 0.9rem;
+    width: 8.5rem;
+  }
+  .statusCard .cards .smallerFont {
+    font-size: 0.8rem;
+  }
+  .statusCard .cards .is-active {
+    background-color: #ff8508;
+    color: #ffff;
+  }
+  .statusCard .cards .inactive {
+    background-color: #666666;
+    cursor: not-allowed;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .productsList {
     width: 60vw;
     border-right: solid 1px #666666;
@@ -386,69 +468,6 @@
   }
   .orderList .orderDetails .prodQty p {
     margin-bottom: 0.3rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .statusCard {
-    margin: 1.3rem;
-    line-height: 1.2rem;
-  }
-  .statusCard .cards {
-    font-size: 0.9rem;
-    border: solid 1px #ff8508;
-    background-color: #ffff;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    padding: 0.4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin: 0.5rem;
-    padding: 0.8rem;
-    width: 15rem;
-  }
-  .statusCard .cards h3, .statusCard .cards button {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin: 0.5rem;
-  }
-  .statusCard .cards .onlyrow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .statusCard .cards button {
-    border: solid 1px transparent;
-    background-color: #ff8508;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    padding: 0.2rem;
-    color: #ffff;
-  }
-  .statusCard .cards .smallerFont {
-    font-size: 0.8rem;
   }
 }
 

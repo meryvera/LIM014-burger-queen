@@ -1,32 +1,29 @@
-import React from 'react'
-import { ChefNavBar } from './ChefNavBar';
+import React from "react";
+import { readAllOrders } from '../../firebase/firestore'
+import { ChefEachOrder } from "./ChefEachOrder";
+import { ChefNavBar } from "./ChefNavBar";
 
-export const Chef = () => {
+export const ChefOrder = () => {
+  const [orders, setOrders] = React.useState([]);
+
+  React.useEffect(() => {
+    readAllOrders(setOrders);
+  }, []);
+
   return (
     <section>
       <ChefNavBar />
       <article className="statusCard">
-          <div className="cards">
-            <h3>Order #1234</h3>
-            <div>
-              <div className="onlyrow">
-                <p><strong>1&nbsp;&nbsp;</strong></p>
-                <p>Hamburguesa simple de pollo con huevo</p>
-              </div>
-              <div className="onlyrow">
-                <p><strong>1&nbsp;&nbsp;</strong></p>
-                <p>Hamburguesa simple de pollo con huevo</p>
-              </div>
-            </div>
-            <button>Orden lista para entregar</button>
-            <div className="smallerFont">
-              <p>Hora del pedido:</p>
-              <p>Tiempo: *que salga corriendo*</p>
-            </div>
-              
-            </div>
-          </article>
+        {orders.length > 0
+          ? orders.map((order) => (
+              <ChefEachOrder
+                order={order}
+                key={order.id}
+              />
+            ))
+          : null
+        }
+      </article>
     </section>
-    
-  )
-}
+  );
+};
