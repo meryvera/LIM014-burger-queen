@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import mainBurger from "../../img/burger.png"
 
 export const NavBar = () => {
@@ -7,10 +7,10 @@ export const NavBar = () => {
     <nav className="navServer">
       <img src={mainBurger} alt="burger" />
       <ul>
-        <li><Link to="/mesero/hacer-pedidos">Realizar pedidos</Link></li>
-        <li><Link to="/mesero/estado-pedidos">Estado de los pedidos</Link></li>
-        <li><Link to="/mesero/historial-pedidos">Historial de los pedidos</Link></li>
-        <li><Link to="/">Salir</Link></li>
+        <li><NavLink activeClassName="active" to="/mesero/hacer-pedidos">Realizar pedidos</NavLink></li>
+        <li><NavLink activeClassName="active" to="/mesero/estado-pedidos">Estado de los pedidos</NavLink></li>
+        <li><NavLink activeClassName="active" to="/mesero/historial-pedidos">Historial de los pedidos</NavLink></li>
+        <li><NavLink activeClassName="active" to="/">Salir</NavLink></li>
       </ul>
     </nav>
   )

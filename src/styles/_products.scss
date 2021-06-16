@@ -18,6 +18,16 @@
           }
         }
       }
+      .is-active{
+        background-color: $mainColor;
+        color: $white;
+        border: none;
+      }
+      .inactive{
+        background-color: $grey;
+        color: $black;
+        border: none;
+      }
     }
     .cards{
       @include displayFlex(row, flex-start, center);

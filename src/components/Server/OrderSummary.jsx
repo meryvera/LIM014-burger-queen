@@ -1,14 +1,15 @@
 import React from "react";
 import { OrderSummaryProd } from "./OrderSummaryProd";
 import { createOrder } from '../../firebase/firestore'
+import {toast} from 'react-toastify';
 
 export const OrderSummary = ({ handleRemove, handleQty, state, setState, initialValues }) => {
-  
+
   const totalSum = (products) => {
     const total = products.reduce((acc, item) => acc + item.price * item.amount, 0);
     return total
   }
-  
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setState({...state, [name] : value})
@@ -16,6 +17,10 @@ export const OrderSummary = ({ handleRemove, handleQty, state, setState, initial
 
   const dataStore = async(state) => {
     await createOrder(state);
+    toast('La orden se envió exitosamente', {
+      type:'success',
+      autoClose: 3000,
+    })
     await setState(initialValues);
   }
 
@@ -71,18 +76,18 @@ export const OrderSummary = ({ handleRemove, handleQty, state, setState, initial
             />
           ))}
           {
-            state.products.length > 0 ? 
+            state.products.length > 0 ?
             <h3 className="h3">Total:&nbsp;&nbsp;&nbsp;S/. {totalSum(state.products)}</h3>
             : <h5>No has agregado ningún producto :(</h5>
-          } 
-          
+          }
+
         </aside>
       </section>
       <div>
         {
            state.products.length > 0 ?
            <>
-            <button className="submitButton grey" 
+            <button className="submitButton grey"
               onClick={e=> {
                 e.preventDefault()
                 setState(initialValues)
@@ -95,9 +100,9 @@ export const OrderSummary = ({ handleRemove, handleQty, state, setState, initial
           </>
          : ''
         }
-        
+
       </div>
-      
+
     </form>
   );
 };

@@ -5,6 +5,8 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 import { Home } from "./components/Home";
 import { Order } from "./components/Server/Order";
@@ -16,6 +18,7 @@ import { ChefHistory} from "./components/Chef/ChefHistory";
 
 export const App = () => {
   return (
+    <>
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -26,5 +29,7 @@ export const App = () => {
         <Route exact path="/cocina/historial-pedidos" component={ChefHistory} />
       </Switch>
     </Router>
+    <ToastContainer/>
+    </>
   );
 }

@@ -10,6 +10,7 @@
       @include displayFlex(row, space-around, center);
       li {
         margin-left: 2.1rem;
+
         &:hover {
           transform: scale(1.15);
           transition: all .2s ease-in-out;
@@ -17,11 +18,17 @@
         a {
           font-weight:300;
           color: $white;
+          padding: 0.3rem;
+          /* border-radius: 1rem; */
         }
       }
     }
     img {
       width: 2.5rem;
+    }
+    .active{
+      /* background-color: black; */
+      border-bottom: rgb(20, 20, 20) 3px solid;
     }
   }
 }

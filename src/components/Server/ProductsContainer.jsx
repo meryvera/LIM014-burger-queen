@@ -47,11 +47,11 @@ export const ProductsContainer = ({ chosenProduct, state, handleQty }) => {
       <article>
         <ul className="cards">
           {products.map((product) => (
-            <Product 
-              product={product} 
-              chosenProduct={chosenProduct} 
-              key={product.id} 
-              state={state} 
+            <Product
+              product={product}
+              chosenProduct={chosenProduct}
+              key={product.id}
+              state={state}
               handleQty={handleQty}/>
           ))}
         </ul>
