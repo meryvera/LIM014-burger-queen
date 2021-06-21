@@ -23,7 +23,7 @@ export const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/mesero/hacer-pedidos" component={Order} />
-        <Route exact path="/mesero/estado-pedidos" component={OrderStatus} />
+          xact path="/mesero/estado-pedidos" component={OrderStatus} />
         <Route exact path="/mesero/historial-pedidos" component={OrderHistory} />
         <Route exact path="/cocina/preparar-orden" component={ChefOrder} />
         <Route exact path="/cocina/historial-pedidos" component={ChefHistory} />
